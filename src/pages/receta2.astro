@@ -1,0 +1,125 @@
+---
+import './../../public/styles.css'
+import Card from '../components/card.astro'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Recetario.com</title>
+	</head>
+	<body>
+     <header class="header-princ">
+		<h1 class="title-header">Recetario Navideño</h1>
+	 </header>
+		
+		<div class="ui raised very padded text container segment">
+            <img class="img-receta" src="/img/pavo.jpg">
+			<h2 class="ui header">Pavo relleno</h2>
+			<p>Ingredientes:</p>
+            <p>
+                Para el pavo:
+
+                1 pavo entero (de aproximadamente 5 a 6 kg)
+                1/4 taza de mantequilla derretida
+                1/4 taza de aceite de oliva
+                Sal y pimienta al gusto
+                1 cabeza de ajo (partida a la mitad)
+                1 cebolla (cortada en cuartos)
+                2 ramas de romero fresco
+                2 ramas de tomillo fresco
+                1 hoja de laurel
+                1 limón (partido en 4)
+                1 taza de caldo de pollo (o más, según sea necesario para la cocción)
+                Para el relleno:
+                
+                500 g de carne molida de cerdo
+                500 g de carne molida de res
+                1 taza de pan rallado o 6 rebanadas de pan de caja (remojadas en caldo o leche)
+                1/2 taza de pasas
+                1/2 taza de almendras picadas (opcional)
+                1/2 taza de manzana picada en cubos pequeños
+                1/4 taza de cebolla picada
+                2 dientes de ajo picados
+                1/2 taza de zanahoria rallada
+                1/2 taza de piña en almíbar (opcional)
+                1/4 taza de vino blanco o brandy (opcional)
+                Sal y pimienta al gusto
+                Aceite para freír
+                Para la salsa:
+                
+                1 taza de jugo de naranja
+                1/4 taza de vino tinto o blanco
+                1/4 taza de caldo de pollo
+                2 cucharadas de mantequilla
+                Sal y pimienta al gusto
+                Instrucciones:
+                1. Preparar el relleno:
+                
+                En una sartén grande, calienta un poco de aceite y sofríe la cebolla y el ajo hasta que estén dorados.
+                Agrega la carne molida de cerdo y res, y cocina hasta que se dore bien. Incorpora la zanahoria rallada, las manzanas, las pasas, las almendras y la piña (si las estás usando).
+                Agrega el pan rallado (o el pan de caja remojado en caldo o leche), y mezcla bien. Si quieres, añade el vino blanco o brandy para dar un toque especial.
+                Sazona con sal y pimienta al gusto. Cocina durante unos minutos más para integrar los sabores. Reserva y deja enfriar un poco antes de usarlo.
+                2. Preparar el pavo:
+                
+                Precalienta el horno a 180°C (350°F).
+                Limpia el pavo, retirando las plumas y vísceras. Lava el pavo con agua fría y sécalo con toallas de papel.
+                Rellena el pavo con la mezcla que preparaste anteriormente, asegurándote de que quede bien compacto. Puedes cerrar la abertura con palillos o coserla con hilo de cocina.
+                Unta el pavo con la mantequilla derretida y el aceite de oliva. Sazona generosamente con sal y pimienta. Coloca dentro de la cavidad del pavo las hierbas (romero, tomillo, laurel), el ajo y el limón.
+                3. Cocinar el pavo:
+                
+                Coloca el pavo en una bandeja para hornear, sobre una rejilla o una cama de verduras (si lo prefieres). Agrega un poco de caldo de pollo en el fondo de la bandeja.
+                Cubre el pavo con papel aluminio y hornéalo durante aproximadamente 2 a 2.5 horas, o hasta que la temperatura interna alcance los 75°C (165°F). Si tu pavo es más grande, puede tomar más tiempo.
+                Cada 30-40 minutos, rocía el pavo con el jugo de la bandeja (puedes agregar más caldo si es necesario) para mantenerlo jugoso.
+                Durante los últimos 30 minutos, retira el papel aluminio para que el pavo se dore bien.
+                4. Preparar la salsa:
+                
+                Mientras el pavo se cocina, prepara la salsa. En una sartén pequeña, derrite la mantequilla y agrega el jugo de naranja, el vino y el caldo de pollo.
+                Cocina a fuego medio hasta que la salsa se reduzca a la mitad y tenga una consistencia ligeramente espesa. Ajusta la sal y pimienta al gusto.
+                5. Servir:
+                
+                Una vez que el pavo esté listo, retíralo del horno y deja reposar por 10-15 minutos antes de cortar.
+                Sirve el pavo con la salsa de naranja por encima. Puedes acompañarlo con puré de papas, arroz, ensaladas y otros platillos tradicionales de la Navidad.
+            </p>
+           
+            <br/>
+            <p><b>Segunda opción:</b> Tutorial de como preparar Pavo relleno</p>
+            <h1>Reproductor de Audio</h1>
+
+            <!-- Contenedor del audio -->
+            <audio id="audioPlayer" src="/audios/pavo.mpeg"></audio>
+          
+            <!-- Controles -->
+            <button id="playButton">Reproducir</button>
+            <button id="pauseButton">Pausar</button>
+            <button id="stopButton">Detener</button>
+		  </div>
+          <script type="module">
+            const audio = document.getElementById('audioPlayer');
+        
+            // Referencia a los botones
+            const playButton = document.getElementById('playButton');
+            const pauseButton = document.getElementById('pauseButton');
+            const stopButton = document.getElementById('stopButton');
+            
+            //Reproducir audio
+            playButton.addEventListener('click', () => {
+              audio.play();
+            });
+        
+            // Pausar el audio
+            pauseButton.addEventListener('click', () => {
+              audio.pause();
+            });
+        
+            // Detener el audio (pausar y reiniciar el tiempo)
+            stopButton.addEventListener('click', () => {
+              audio.pause();
+              audio.currentTime = 0; 
+            });
+          </script>
+	</body>
+</html>

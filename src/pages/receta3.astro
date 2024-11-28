@@ -1,0 +1,104 @@
+---
+import './../../public/styles.css'
+import Card from '../components/card.astro'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Recetario.com</title>
+	</head>
+	<body>
+     <header class="header-princ">
+		<h1 class="title-header">Recetario Navideño</h1>
+	 </header>
+		
+		<div class="ui raised very padded text container segment">
+            <img class="img-receta" src="/img/ponche.jpg">
+			<h2 class="ui header">Ponche Navideño</h2>
+			<p>Ingredientes:</p>
+            <p>
+                3 manzanas (rojas o verdes), picadas en cubos pequeños
+                3 peras, picadas en cubos pequeños
+                1/2 piña, pelada y picada en trozos
+                1/4 taza de pasas
+                1 rama de canela
+                3 clavos de olor
+                1 trozo de piloncillo (aproximadamente 100 g) o 1 taza de azúcar moreno
+                1/2 taza de tamarindo (puedes usar tamarindo fresco o en pasta)
+                1 naranja, partida en rodajas
+                1 limón, partido en rodajas (opcional)
+                1.5 litros de agua
+                1 taza de tejocotes (puedes encontrarlos enlatados o frescos, o sustituir por otras frutas como membrillo si no los encuentras)
+                1/2 taza de albahaca (opcional, para un toque de frescura)
+                1/4 taza de ron o tequila (opcional, para darle un toque alcohólico)
+                1 taza de guayabas (opcional)
+                Instrucciones:
+                Preparar los ingredientes:
+                
+                Lava bien las frutas (manzanas, peras, piña, naranja, limón) y córtalas en trozos pequeños o rodajas.
+                Si usas tamarindo fresco, retira la cáscara y las semillas. Si es pasta de tamarindo, puedes disolverla en un poco de agua caliente para facilitar su incorporación.
+                Cocinar el ponche:
+                
+                En una olla grande, coloca todos los ingredientes (manzanas, peras, piña, pasas, canela, clavos de olor, piloncillo, tamarindo, rodajas de naranja y limón, tejocotes y guayabas si los usas).
+                Agrega el agua y lleva la mezcla a fuego medio-alto hasta que comience a hervir. Una vez que hierva, reduce el fuego y deja que se cocine a fuego lento durante unos 40-45 minutos para que los sabores se integren bien.
+                Endulzar y ajustar sabores:
+                
+                Si deseas un ponche más dulce, puedes agregar más piloncillo o azúcar al gusto. También puedes ajustar el nivel de acidez agregando más piloncillo o un poco más de agua si lo prefieres menos concentrado.
+                Añadir el toque alcohólico (opcional):
+                
+                Si te gusta el ponche con alcohol, agrega el ron o tequila al final de la cocción y deja que se mezcle durante unos minutos.
+                Servir:
+                
+                Sirve el ponche caliente, colando las frutas si lo prefieres sin ellas, o puedes dejar algunas frutas flotando en el líquido para darle un toque decorativo.
+                Puedes acompañarlo con caña de azúcar o rodajas de frutas adicionales para un toque festivo.
+            </p>
+            <p>Consejos:</p>
+			<p>
+                Si no consigues algunos ingredientes como el tamarindo o los tejocotes, puedes sustituirlos por otras frutas de temporada que encuentres fácilmente.
+                Puedes ajustar el nivel de dulzura según tu preferencia, ya que algunas frutas como la piña ya son naturalmente dulces.
+                El ponche puede servirse tanto con alcohol (como ron o tequila) como sin alcohol, dependiendo de tus gustos o los de tus invitados.
+		 
+                <br/>
+
+            <p><b>Segunda opción:</b> Tutorial de como preparar Ponche Navideño</p>
+
+                <h1>Reproductor de Audio</h1>
+
+                <!-- Contenedor del audio -->
+                <audio id="audioPlayer" src="/audios/ponche.mpeg"></audio>
+              
+                <!-- Controles -->
+                <button id="playButton">Reproducir</button>
+                <button id="pauseButton">Pausar</button>
+                <button id="stopButton">Detener</button>
+            </div>
+            <script type="module">
+                const audio = document.getElementById('audioPlayer');
+            
+                // Referencia a los botones
+                const playButton = document.getElementById('playButton');
+                const pauseButton = document.getElementById('pauseButton');
+                const stopButton = document.getElementById('stopButton');
+                
+                //Reproducir audio
+                playButton.addEventListener('click', () => {
+                  audio.play();
+                });
+            
+                // Pausar el audio
+                pauseButton.addEventListener('click', () => {
+                  audio.pause();
+                });
+            
+                // Detener el audio (pausar y reiniciar el tiempo)
+                stopButton.addEventListener('click', () => {
+                  audio.pause();
+                  audio.currentTime = 0; 
+                });
+              </script>
+	</body>
+</html>

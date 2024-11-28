@@ -1,0 +1,99 @@
+---
+import './../../public/styles.css'
+import Card from '../components/card.astro'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Recetario.com</title>
+	</head>
+	<body>
+     <header class="header-princ">
+		<h1 class="title-header">Recetario Navideño</h1>
+	 </header>
+		
+		<div class="ui raised very padded text container segment">
+            <img class="img-receta" src="/img/ensalada.jpg">
+
+			<h2 class="ui header">Ensalada de Manzana</h2>
+			<p>Ingredientes:</p>
+            <p>
+                4 manzanas verdes o rojas (preferentemente de tipo crujiente)
+                1 taza de zanahoria rallada (opcional)
+                1 taza de piña en almíbar, escurrida y picada en cubos pequeños
+                1/2 taza de nuez picada (puedes usar nuez de la India o almendras)
+                1/2 taza de pasas (opcional)
+                1 taza de crema para batir o crema ácida
+                1/2 taza de mayonesa
+                1/4 taza de azúcar (ajustar al gusto)
+                Jugo de 1 limón (opcional, para evitar que las manzanas se oxiden)
+                Instrucciones:
+                Preparar las manzanas:
+                
+                Lava bien las manzanas, pélalas (si lo prefieres) y córtalas en cubos pequeños. Si no quieres que se oxiden rápidamente, puedes rociarlas con el jugo de limón.
+                Mezclar los ingredientes secos:
+                
+                En un tazón grande, agrega las manzanas picadas, la zanahoria rallada, la piña en cubos, las pasas (si las estás usando) y la nuez picada.
+                Preparar el aderezo:
+                
+                En otro tazón, mezcla la crema para batir o la crema ácida con la mayonesa. Agrega el azúcar y mezcla bien hasta que quede una crema suave. Si prefieres un sabor menos dulce, ajusta la cantidad de azúcar según tu gusto.
+                Mezclar la ensalada:
+                
+                Agrega el aderezo sobre los ingredientes de la ensalada y mezcla todo con cuidado para que se integren bien los sabores, pero sin romper las frutas.
+                Refrigerar:
+                
+                Cubre la ensalada con plástico adherente y refrigérala durante al menos una hora antes de servir. Esto permitirá que los sabores se integren mejor y se sirva bien fría.
+                Servir:
+                
+                Puedes decorar la ensalada con un poco más de nuez picada o incluso con algunas cerezas en almíbar para un toque festivo.
+            </p>
+            <p>Consejos:</p>
+			<p>
+                Puedes agregar otros ingredientes como trozos de durazno o frutas frescas si te gustan.
+                Si prefieres una versión más ligera, puedes usar yogurt griego en lugar de mayonesa.
+                Esta ensalada es un excelente acompañamiento para platillos principales como el pavo o el bacalao. </p>
+                <br/>
+                <p><b>Segunda opción:</b> Tutorial de como preparar Ensalada de Manzana</p>
+
+                <h1>Reproductor de Audio</h1>
+
+                <!-- Contenedor del audio -->
+                <audio id="audioPlayer" src="/audios/ensalada.mpeg"></audio>
+              
+                <!-- Controles -->
+                <button id="playButton">Reproducir</button>
+                <button id="pauseButton">Pausar</button>
+                <button id="stopButton">Detener</button>
+              
+		  </div>
+
+          <script type="module">
+            const audio = document.getElementById('audioPlayer');
+        
+            // Referencia a los botones
+            const playButton = document.getElementById('playButton');
+            const pauseButton = document.getElementById('pauseButton');
+            const stopButton = document.getElementById('stopButton');
+            
+            //Reproducir audio
+            playButton.addEventListener('click', () => {
+              audio.play();
+            });
+        
+            // Pausar el audio
+            pauseButton.addEventListener('click', () => {
+              audio.pause();
+            });
+        
+            // Detener el audio (pausar y reiniciar el tiempo)
+            stopButton.addEventListener('click', () => {
+              audio.pause();
+              audio.currentTime = 0; 
+            });
+          </script>
+	</body>
+</html>

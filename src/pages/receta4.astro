@@ -1,0 +1,114 @@
+---
+import './../../public/styles.css'
+import Card from '../components/card.astro'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Recetario.com</title>
+	</head>
+	<body>
+     <header class="header-princ">
+		<h1 class="title-header">Recetario Navideño</h1>
+	 </header>
+		
+		<div class="ui raised very padded text container segment">
+            <img class="img-receta" src="/img/pozole.jpg">
+            <h2 class="ui header">Pozole rojo</h2>
+			<p>Ingredientes:</p>
+            <p>
+                Para el pozole:
+
+                1 kg de maíz pozolero (hominy), ya cocido (puede ser enlatado o precocido)
+                1 kg de carne de cerdo (puedes usar espaldilla, pierna, costilla o una mezcla de cerdo y pollo)
+                1 cebolla, partida en cuartos
+                3 dientes de ajo, pelados
+                3 hojas de laurel
+                Sal al gusto
+                Agua (aproximadamente 4-5 litros, dependiendo de la cantidad de caldo que desees)
+                Para la salsa roja:
+                
+                6 chiles guajillos
+                3 chiles anchos
+                2 dientes de ajo
+                1/2 cebolla
+                1/2 cucharadita de comino en polvo
+                1/4 cucharadita de orégano seco
+                2 tazas de caldo de pollo (o el caldo de la carne)
+                Sal al gusto
+                Para acompañar:
+                
+                Rábanos rebanados
+                Lechuga o repollo finamente picado
+                Orégano seco
+                Tiritas de chile en polvo o rodajas de chile serrano
+                Limón en mitades
+                Tostadas o tortillas
+                Instrucciones:
+                Cocer la carne y el maíz:
+                
+                Si estás utilizando maíz seco, colócalo en una olla con agua suficiente y cocínalo hasta que los granos se revienten (esto puede tardar entre 2 y 3 horas). Si usas maíz enlatado o precocido, solo necesitarás enjuagarlo bien.
+                En otra olla grande, pon la carne de cerdo (y de pollo si prefieres), las hojas de laurel, la cebolla, los dientes de ajo y suficiente agua para cubrirla. Cocina a fuego medio-alto durante 1.5 a 2 horas, hasta que la carne esté tierna. Agrega sal al gusto durante la cocción.
+                Preparar la salsa roja:
+                
+                En un sartén seco, tuesta ligeramente los chiles guajillo y ancho durante unos segundos para que se suavicen (sin dejar que se quemen).
+                Coloca los chiles en un recipiente con agua caliente y déjalos reposar durante unos 10 minutos.
+                Después de este tiempo, licúa los chiles con los 2 dientes de ajo, la cebolla, el comino, el orégano y 2 tazas del caldo de la carne hasta obtener una salsa suave. Agrega sal al gusto.
+                Unir todos los ingredientes:
+                
+                Una vez que la carne esté cocida, retírala de la olla y desmenúzala en trozos pequeños o medianos.
+                Agrega el maíz cocido y la salsa roja a la olla con el caldo de la carne. Cocina a fuego medio-bajo durante 30-40 minutos, para que los sabores se mezclen bien. Ajusta de sal si es necesario y añade más caldo si lo prefieres más líquido.
+                Servir:
+                
+                Sirve el pozole caliente en platos hondos. Acompáñalo con rábanos rebanados, lechuga o repollo picado, orégano seco, tiritas de chile en polvo o rodajas de chile serrano, y un poco de jugo de limón al gusto.
+                Acompaña con tostadas o tortillas.
+            </p>
+            <p>Consejos:</p>
+			<p>
+                Si prefieres un sabor más intenso, puedes añadir más chiles secos o agregar caldo de pollo concentrado.
+                Puedes hacer el pozole con solo carne de cerdo, pollo o una combinación de ambas, dependiendo de tu preferencia.
+                La salsa roja puede hacerse más suave o picante dependiendo de la cantidad de chile y las semillas que dejes al prepararla.
+		 
+                <br/>
+                <p><b>Segunda opción:</b> Tutorial de como preparar Pozole rojo</p>
+
+                <h1>Reproductor de Audio</h1>
+
+                <!-- Contenedor del audio -->
+                <audio id="audioPlayer" src="/audios/pozole.mpeg"></audio>
+              
+                <!-- Controles -->
+                <button id="playButton">Reproducir</button>
+                <button id="pauseButton">Pausar</button>
+                <button id="stopButton">Detener</button>
+            </div>
+            <script type="module">
+                const audio = document.getElementById('audioPlayer');
+            
+                // Referencia a los botones
+                const playButton = document.getElementById('playButton');
+                const pauseButton = document.getElementById('pauseButton');
+                const stopButton = document.getElementById('stopButton');
+                
+                //Reproducir audio
+                playButton.addEventListener('click', () => {
+                  audio.play();
+                });
+            
+                // Pausar el audio
+                pauseButton.addEventListener('click', () => {
+                  audio.pause();
+                });
+            
+                // Detener el audio (pausar y reiniciar el tiempo)
+                stopButton.addEventListener('click', () => {
+                  audio.pause();
+                  audio.currentTime = 0; 
+                });
+              </script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+---
+import './../../public/styles.css'
+import Card from '../components/card.astro'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Recetario.com</title>
+	</head>
+	<body>
+     <header class="header-princ">
+		<h1 class="title-header">Recetario Navideño</h1>
+	 </header>
+		
+		<div class="ui raised very padded text container segment">
+			<h2 class="ui header">Recetas Navideñas</h2>
+			<p>Para esta temporada o cena navideña, acompaña con un buen platillo navideño.</p>
+			<p>Recetas Disponibles: </p>
+		     <Card></Card>
+		  </div>
+	</body>
+</html>
